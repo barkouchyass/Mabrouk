@@ -380,6 +380,321 @@
                 width: 100% !important;
             }
         }
+
+        /* --- Rooms Section Styles --- */
+        .rooms-section {
+            background: url('images/bg home section.png');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            padding: 4rem 0;         /* espace intérieur haut/bas */
+            margin-top: 3rem;        /* espace extérieur haut */
+            margin-bottom: 3rem;     /* espace extérieur bas */
+        }
+        /* Réduction de l'espace à gauche */
+        .rooms-section > div {
+            max-width: 1320px;
+            margin: 0 auto;
+            padding-left: 1rem !important;
+            padding-right: 2rem !important;
+        }
+        .rooms-section .rooms-header-row,
+        .rooms-section .d-flex.flex-wrap.align-items-start.justify-content-between {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            margin-bottom: 2.5rem;
+            padding-top: 4rem;
+            padding-left: 1rem !important;
+            padding-right: 6rem;
+        }
+        .rooms-section .rooms-header-row > div,
+        .rooms-section .d-flex.flex-wrap.align-items-start.justify-content-between > div {
+            flex: 1;
+        }
+        .rooms-section .rooms-header-row .subtitle,
+        .rooms-section .d-flex.flex-wrap.align-items-start.justify-content-between .subtitle {
+            font-family: 'Urbanist', sans-serif;
+            color: #d4a373;
+            text-transform: uppercase;
+            letter-spacing: 0.18em;
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
+        .rooms-section .rooms-header-row .title,
+        .rooms-section .d-flex.flex-wrap.align-items-start.justify-content-between .title {
+            font-family: 'Glida Display', serif;
+            color: #fff;
+            font-size: 2.8rem;
+            font-weight: 300;
+            letter-spacing: 0.05em;
+            margin-bottom: 0;
+        }
+        .rooms-section .rooms-header-row .desc,
+        .rooms-section .d-flex.flex-wrap.align-items-start.justify-content-between .desc {
+            flex: 1.2;
+            color: #fff;
+            font-family: 'Urbanist', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 400;
+            line-height: 1.7;
+            margin-left: 2rem;
+            margin-top: 0.5rem;
+        }
+        .rooms-section .rooms-slider-row,
+        .rooms-section .d-flex.align-items-center.justify-content-center {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            padding-left: 1rem !important;
+            padding-right: 6rem;
+            margin-bottom: 4rem;
+        }
+        .rooms-section .room-card,
+        .rooms-section .d-flex.align-items-center.justify-content-center > div:not(.d-flex) {
+            position: relative;
+            border-radius: 1rem;
+            overflow: hidden;
+            flex: 1 1 0;
+            min-width: 0;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+            margin-bottom: 0;
+            background: none;
+        }
+        .rooms-section .room-card img,
+        .rooms-section .d-flex.align-items-center.justify-content-center > div:not(.d-flex) img {
+            width: 100%;
+            height: 340px;
+            object-fit: cover;
+            display: block;
+        }
+        .rooms-section .room-card .card-overlay,
+        .rooms-section .d-flex.align-items-center.justify-content-center > div:not(.d-flex) > div[style*="background:linear-gradient"] {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg,rgba(0,0,0,0.18) 40%,rgba(0,0,0,0.75) 100%);
+            z-index: 1;
+        }
+        .rooms-section .room-card .badge-offer,
+        .rooms-section .d-flex.align-items-center.justify-content-center > div:not(.d-flex) .badge-offer {
+            position: absolute;
+            top: 1.2rem;
+            left: 1.2rem;
+            z-index: 2;
+            background: #fff;
+            color: #d4a373;
+            font-size: 1rem;
+            font-family: 'Urbanist', sans-serif;
+            font-weight: 500;
+            border-radius: 0.6rem;
+            padding: 0.3rem 1rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+        .rooms-section .room-card .card-content,
+        .rooms-section .d-flex.align-items-center.justify-content-center > div:not(.d-flex) > div[style*="position:absolute; left:0; right:0; bottom:0;"] {
+            position: absolute;
+            left: 0; right: 0; bottom: 0;
+            z-index: 2;
+            color: #fff;
+            padding: 2rem 2rem 1.5rem 2rem;
+        }
+        .rooms-section .room-card .room-title,
+        .rooms-section .d-flex.align-items-center.justify-content-center > div:not(.d-flex) .room-title {
+            font-family: 'Glida Display', serif;
+            font-size: 1.5rem;
+            font-weight: 400;
+            margin-bottom: 1.2rem;
+        }
+        .rooms-section .room-card .room-features,
+        .rooms-section .d-flex.align-items-center.justify-content-center > div:not(.d-flex) .room-features {
+            display: flex;
+            gap: 1.5rem;
+            font-size: 1rem;
+            align-items: center;
+            opacity: 0.92;
+        }
+        .rooms-section .room-card .room-features i,
+        .rooms-section .d-flex.align-items-center.justify-content-center > div:not(.d-flex) .room-features i {
+            margin-right: 0.4rem;
+            color: #d4a373;
+        }
+        .rooms-section .slider-nav,
+        .rooms-section .d-flex.flex-column {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+            margin-left: 2rem;
+        }
+        .rooms-section .slider-btn,
+        .rooms-section .d-flex.flex-column button {
+            background: rgba(255,255,255,0.12);
+            border: none;
+            border-radius: 50%;
+            width: 2.7rem;
+            height: 2.7rem;
+            color: #fff;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.2s;
+        }
+        .rooms-section .slider-btn:hover,
+        .rooms-section .d-flex.flex-column button:hover {
+            background: #d4a373;
+            color: #fff;
+        }
+        @media (max-width: 1200px) {
+            .rooms-section .rooms-header-row,
+            .rooms-section .d-flex.flex-wrap.align-items-start.justify-content-between,
+            .rooms-section .rooms-slider-row,
+            .rooms-section .d-flex.align-items-center.justify-content-center {
+                padding-left: 1rem !important;
+                padding-right: 2rem !important;
+            }
+        }
+        @media (max-width: 992px) {
+            .rooms-section .rooms-header-row,
+            .rooms-section .d-flex.flex-wrap.align-items-start.justify-content-between,
+            .rooms-section .rooms-slider-row,
+            .rooms-section .d-flex.align-items-center.justify-content-center {
+                flex-direction: column;
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+            .rooms-section .rooms-header-row .desc,
+            .rooms-section .d-flex.flex-wrap.align-items-start.justify-content-between .desc {
+                margin-left: 0;
+                margin-top: 1.5rem;
+            }
+            .rooms-section .rooms-slider-row,
+            .rooms-section .d-flex.align-items-center.justify-content-center {
+                gap: 1rem;
+            }
+            .rooms-section .slider-nav,
+            .rooms-section .d-flex.flex-column {
+                margin-left: 0;
+                flex-direction: row;
+                gap: 1.2rem;
+                justify-content: center;
+                margin-top: 2rem;
+            }
+        }
+        @media (max-width: 768px) {
+            .rooms-section {
+                padding-top: 1.2rem !important;
+                padding-bottom: 1.2rem !important;
+            }
+            .rooms-section > div {
+                padding-left: 0.2rem !important;
+                padding-right: 0.2rem !important;
+            }
+            .rooms-section .d-flex.flex-wrap.align-items-start.justify-content-between {
+                flex-direction: column !important;
+                align-items: center !important;
+                padding-top: 1.2rem !important;
+                padding-bottom: 0 !important;
+                padding-left: 0 !important;
+                padding-right: 0 !important;
+                margin-bottom: 1.2rem !important;
+            }
+            .rooms-section .d-flex.flex-wrap.align-items-start.justify-content-between > div {
+                width: 100% !important;
+                flex: unset !important;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .rooms-section .d-flex.flex-wrap.align-items-start.justify-content-between .subtitle {
+                font-size: 1rem !important;
+                text-align: center !important;
+                width: 100%;
+                margin-bottom: 0.2rem !important;
+                letter-spacing: 0.18em;
+            }
+            .rooms-section .d-flex.flex-wrap.align-items-start.justify-content-between .title {
+                font-size: 1.5rem !important;
+                text-align: center !important;
+                margin-bottom: 0.7rem !important;
+                width: 100%;
+                letter-spacing: 0.05em;
+            }
+            /* Carrousel texte + flèches */
+            .rooms-section #rooms-arrows {
+                display: flex !important;
+                flex-direction: row !important;
+                align-items: center !important;
+                justify-content: center !important;
+                margin: 0 !important;
+                width: 100%;
+                gap: 0.5rem;
+                margin-bottom: 0.5rem;
+            }
+            .rooms-section .d-flex.flex-row.ms-4 {
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+                justify-content: center !important;
+                width: auto !important;
+            }
+            .rooms-section #rooms-carousel-text {
+                font-size: 0.95rem !important;
+                text-align: center !important;
+                display: inline-block;
+                width: 70vw;
+                margin: 0 0.5rem;
+                color: #fff !important;
+                line-height: 1.5;
+            }
+            .rooms-section .d-flex.align-items-center.justify-content-center {
+                flex-direction: column !important;
+                gap: 1.2rem !important;
+                margin-bottom: 1.2rem !important;
+                align-items: center !important;
+            }
+            .rooms-section .d-flex.align-items-center.justify-content-center > div {
+                width: 100% !important;
+                max-width: 400px;
+                margin: 0 auto;
+            }
+            .rooms-section .d-flex.align-items-center.justify-content-center img {
+                height: 180px !important;
+                object-fit: cover;
+                border-radius: 0.7rem;
+            }
+            /* Réorganisation du header : titre, puis carrousel texte+flèches */
+            .rooms-section .d-flex.flex-wrap.align-items-start.justify-content-between > div:first-child {
+                flex-direction: column !important;
+                align-items: center !important;
+                width: 100% !important;
+            }
+            .rooms-section .d-flex.flex-wrap.align-items-start.justify-content-between > div > div {
+                align-items: center !important;
+                text-align: center !important;
+                width: 100%;
+            }
+            /* Centrer le bloc "Mabrouk Hotel" */
+            .rooms-section .d-flex.flex-wrap.align-items-start.justify-content-between .subtitle {
+                justify-content: center !important;
+                display: flex !important;
+            }
+            /* Réduire la taille du texte carrousel */
+            .rooms-section .d-flex.flex-wrap.align-items-start.justify-content-between span#rooms-carousel-text {
+                font-size: 0.95rem !important;
+                text-align: center !important;
+                width: 70vw;
+                margin: 0 0.5rem;
+            }
+            /* Réduire la taille des boutons flèches */
+            .rooms-section #rooms-arrows button {
+                width: 2.2rem !important;
+                height: 2.2rem !important;
+                font-size: 1.1rem !important;
+            }
+        }
     </style>
 </head>
 
@@ -521,11 +836,110 @@
         </div>
     </section>
 
+    <!-- Rooms & Suites Section -->
+    <section class="rooms-section" style="background: url('images/bg home section.png'); background-size: cover; background-position: center;">
+        <div style="max-width: 1320px; margin: 0 auto; padding: 0 2rem;">
+            <div class="d-flex flex-wrap align-items-start justify-content-between align-items-center" style="padding-top: 4rem; margin-bottom: 2.5rem;">
+                <!-- Titre et flèches à gauche -->
+                 <div style="flex:1.8; display: flex; align-items: center; justify-content: flex-start;">
+                    <div>
+                        <div style="font-family: 'Urbanist', sans-serif; color: #d4a373; text-transform: uppercase; letter-spacing: 0.18em; font-size: 1rem; margin-bottom: 0.5rem;">
+                            Mabrouk Hotel
+                        </div>
+                        <div style="font-family: 'Glida Display', serif; color: #fff; font-size: 3.2rem; font-weight: 300; letter-spacing: 0.05em; display: inline-block;">
+                            ROOMS & SUITES
+                        </div>
+                    </div>
+                    
+                
+                <!-- Texte carrousel à droite -->
+                <div style="flex:1.2; color: #fff; font-family: 'Urbanist', sans-serif; font-size: 1.1rem; font-weight: 400; line-height: 1.7; margin-right: 0; margin-left: 2.5rem; margin-top: 0.5rem; min-height: 70px; text-align: left;">
+                    <span id="rooms-carousel-text">
+                        The experience elementum sesue the aucan vestibulum usto sapien rutrum volutan donec fermen lorem ipsum quisque sodales miss in the varius drana miss.
+                    </span>
+                </div>
+                <!-- Carousel Arrows -->
+                <div class="d-flex flex-row ms-4" id="rooms-arrows">
+                    <button id="carousel-prev" style="background:rgba(255,255,255,0.12); border:none; border-radius:50%; width:2.7rem; height:2.7rem; color:#fff; font-size:1.3rem; display:flex; align-items:center; justify-content:center; transition:background 0.2s; margin-right:0.7rem;">
+                        <i class="bi bi-chevron-left"></i>
+                    </button>
+                    <button id="carousel-next" style="background:rgba(255,255,255,0.12); border:none; border-radius:50%; width:2.7rem; height:2.7rem; color:#fff; font-size:1.3rem; display:flex; align-items:center; justify-content:center; transition:background 0.2s;">
+                        <i class="bi bi-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+
+                
+            </div>
+            <div class="d-flex align-items-center justify-content-center" style="gap:2rem; margin-bottom: 4rem;">
+                <!-- Room Card 1 -->
+                <div style="position:relative; border-radius:1rem; overflow:hidden; flex:1 1 0; min-width:0; box-shadow:0 8px 32px rgba(0,0,0,0.18); background:none;">
+                    <img src="images/room 1.png" alt="Deluxe Room" style="width:100%; height:340px; object-fit:cover; display:block;">
+                    <div style="position:absolute; inset:0; background:linear-gradient(180deg,rgba(0,0,0,0.18) 40%,rgba(0,0,0,0.75) 100%); z-index:1;"></div>
+                    <div style="position:absolute; top:1.2rem; left:1.2rem; z-index:2; background:#fff; color:#d4a373; font-size:1rem; font-family:'Urbanist',sans-serif; font-weight:500; border-radius:0.6rem; padding:0.3rem 1rem; box-shadow:0 2px 8px rgba(0,0,0,0.08); display:flex; align-items:center; gap:0.4rem;">
+                        <i class="bi bi-percent"></i> 25% OFF
+                    </div>
+                    <div style="position:absolute; left:0; right:0; bottom:0; z-index:2; color:#fff; padding:2rem 2rem 1.5rem 2rem;">
+                        <div style="font-family:'Glida Display',serif; font-size:1.5rem; font-weight:400; margin-bottom:1.2rem;">Deluxe Room</div>
+                        <div style="display:flex; gap:1.5rem; font-size:1rem; align-items:center; opacity:0.92;">
+                            <span><i class="bi bi-moon" style="color:#d4a373; margin-right:0.4rem;"></i>2 Bed</span>
+                            <span><i class="bi bi-aspect-ratio" style="color:#d4a373; margin-right:0.4rem;"></i>15 Sqm</span>
+                            <span><i class="bi bi-droplet" style="color:#d4a373; margin-right:0.4rem;"></i>1 Bathroom</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Room Card 2 -->
+                <div style="position:relative; border-radius:1rem; overflow:hidden; flex:1 1 0; min-width:0; box-shadow:0 8px 32px rgba(0,0,0,0.18); background:none;">
+                    <img src="images/room 2.png" alt="Family Room" style="width:100%; height:340px; object-fit:cover; display:block;">
+                    <div style="position:absolute; inset:0; background:linear-gradient(180deg,rgba(0,0,0,0.18) 40%,rgba(0,0,0,0.75) 100%); z-index:1;"></div>
+                    <div style="position:absolute; left:0; right:0; bottom:0; z-index:2; color:#fff; padding:2rem 2rem 1.5rem 2rem;">
+                        <div style="font-family:'Glida Display',serif; font-size:1.5rem; font-weight:400; margin-bottom:1.2rem;">Family Room</div>
+                        <div style="display:flex; gap:1.5rem; font-size:1rem; align-items:center; opacity:0.92;">
+                            <span><i class="bi bi-moon" style="color:#d4a373; margin-right:0.4rem;"></i>2-4 Bed</span>
+                            <span><i class="bi bi-aspect-ratio" style="color:#d4a373; margin-right:0.4rem;"></i>20 Sqm</span>
+                            <span><i class="bi bi-cup-hot" style="color:#d4a373; margin-right:0.4rem;"></i>Breakfast</span>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
     
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
         crossorigin="anonymous"></script>
+    <script>
+        // filepath: /Users/mac/Documents/projet WEB/Mabrouk/index.html
+        // Texte aléatoire pour le carrousel
+        const carouselTexts = [
+            "The experience elementum sesue the aucan vestibulum usto sapien rutrum volutan donec fermen lorem ipsum quisque sodales miss in the varius drana miss.",
+            "Discover our unique rooms and suites, each designed for your comfort and relaxation in the heart of the city.",
+            "Enjoy luxury amenities, beautiful views, and personalized service during your stay at Mabrouk Hotel.",
+            "Book now and experience the perfect blend of tradition and modernity in our rooms & suites.",
+            "Wake up to a delicious breakfast and unwind in our spacious, elegant rooms."
+        ];
+        let currentText = 0;
+        const textSpan = document.getElementById('rooms-carousel-text');
+        function showText(idx) {
+            textSpan.textContent = carouselTexts[idx];
+        }
+        function nextText() {
+            currentText = (currentText + 1) % carouselTexts.length;
+            showText(currentText);
+        }
+        function prevText() {
+            currentText = (currentText - 1 + carouselTexts.length) % carouselTexts.length;
+            showText(currentText);
+        }
+        document.getElementById('carousel-next').onclick = nextText;
+        document.getElementById('carousel-prev').onclick = prevText;
+        // Changement automatique toutes les 5 secondes
+        setInterval(nextText, 5000);
+    </script>
 </body>
 
 </html>
+
