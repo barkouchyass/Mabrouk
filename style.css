@@ -1,0 +1,57 @@
+/* style.css */
+body {
+    font-family: 'Georgia', serif;
+  }
+  
+  .hero-section {
+    position: relative;
+    padding-top: 100px; /* space for navbar */
+  }
+  
+  .booking-form {
+    max-width: 960px;
+  }
+  
+  #about h2 {
+    font-size: 2rem;
+  }
+  
+  #about p {
+    color: #555;
+  }
+
+  #rooms .card-img-overlay {
+    backdrop-filter: blur(2px);
+    border-radius: 0.5rem;
+  }
+
+  #offers .card-title {
+    font-weight: bold;
+  }
+  
+  #offers .card {
+    transition: transform 0.2s ease;
+  }
+  
+  #offers .card:hover {
+    transform: translateY(-5px);
+  }
+    
+  .amenity-item h6 {
+    font-size: 1rem;
+    margin-bottom: 0;
+  }
+  
+  #city-guide .card-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+  
+  #footer a:hover {
+    text-decoration: underline;
+  }
+  
+  #footer i {
+    font-size: 1.2rem;
+  }
+  

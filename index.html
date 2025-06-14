@@ -1,0 +1,531 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mabrouk Riad & Spa</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600&family=Semontic:wght@400;500;600&family=Glida+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        .mx-extra {
+            margin-left: 5rem;
+          
+            margin-right: 8rem;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            /* Center items vertically */
+            padding: 10px 20px;
+            /* Reduced padding to decrease navbar height */
+        }
+
+        .navbar-collapse {
+            display: flex;
+            align-items: center;
+            /* Center items vertically within the collapse */
+        }
+
+        .navbar-nav .nav-link {
+            font-weight: 400;
+            /* Changed font weight to make it finer */
+            font-size: 0.9rem;
+            /* Adjusted font size for a finer appearance */
+            color: #333;
+            /* Default text color */
+            transition: color 0.3s ease;
+            /* Smooth hover effect */
+        }
+
+        .navbar-nav .nav-link.active {
+            color: #d4a373;
+            /* Active link color */
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #d4a373;
+            /* Hover color */
+        }
+
+        .btn-book {
+            background-color: #d4a373;
+            /* Button background color */
+            color: #fff;
+            /* Button text color */
+            font-weight: semi-bold;
+            padding: 10px 20px;
+            /* Padding for better appearance */
+            border-radius: 5px;
+            /* Rounded corners */
+            transition: background-color 0.3s ease;
+            /* Smooth hover effect */
+            margin-left: 2rem;
+            /* Added margin to separate the button from the ul li */
+        }
+
+        .btn-book:hover {
+            background-color: #b58a5b;
+            /* Hover effect */
+        }
+
+        .nav-item {
+            margin-right: 1rem;
+            /* Added margin to create spacing between list items */
+        }
+
+        body {
+            font-family: 'Urbanist', sans-serif;
+            /* Set font to Urbanist */
+        }
+
+        .icon-wrapper {
+            width: 5em;
+            height: 5em;
+            display: inline-block;
+            animation: bounce 2s infinite;
+        }
+
+        .icon-wrapper svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        .circle {
+            fill: none;
+            stroke: white;
+            stroke-width: 0.2;
+            /* plus fin */
+        }
+
+        .triangle {
+            fill: white;
+            transform: scale(0.5);
+            transform-origin: center;
+        }
+
+        @keyframes bounce {
+
+            0%,
+            100% {
+                transform: translateY(5%);
+            }
+
+            50% {
+                transform: translateY(-5%);
+            }
+        }
+
+
+        @media (max-width: 768px) {
+            .mx-extra {
+                margin-left: 0;
+                margin-right: 0;
+            }
+
+            .navbar-nav {
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                background-color: #f8f9fa;
+                /* Full-width menu with light background */
+                padding: 1rem;
+                border-radius: 0;
+                /* Remove rounded corners */
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                /* Add subtle shadow */
+            }
+
+            .nav-item {
+                margin-bottom: 0.5rem;
+                width: 100%;
+                text-align: center;
+                /* Center menu items */
+            }
+
+            .btn-book {
+                margin-top: 1rem;
+                margin-left: -3px;
+                /* Move button slightly to the left */
+                width: 100%;
+                text-align: center;
+                display: block;
+            }
+
+            .navbar-brand {
+                align-self: flex-start;
+                margin-left: 1rem;
+                /* Align logo to the top-left */
+            }
+        }
+
+        .hero-section {
+            background: url('images/hero1.png') center center/cover no-repeat;
+            height: 100vh;
+            position: relative;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: left;
+            margin-bottom: 3rem; /* Add space below the hero section */
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.4);
+            z-index: 1;
+        }
+
+        .hero-content {
+            margin-top: 14em; /* Normal mode */
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-title {
+            font-size: 3rem;
+            font-weight: 100;
+        }
+
+        .booking-form {
+            background-color: rgba(0, 0, 0, 0.2);
+            border-radius: 0.5rem;
+            padding: 1rem;
+            margin-top: 2rem;
+            font-family: 'Semontic';
+            font-weight: 100;
+        }
+
+        .booking-form select,
+        .booking-form input {
+            background-color: rgba(255, 255, 255, 0.2);
+            border: none;
+            color: white;
+            position: relative;
+            font-family: 'Semontic';
+            font-weight: 100;
+        }
+
+        .booking-form label {
+            position: absolute;
+            top: 50%;
+            left: 10px;
+            transform: translateY(-50%);
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.6);
+            transition: all 0.3s ease;
+            pointer-events: none;
+            font-family: 'Semontic';
+            font-weight: 100;
+        }
+
+        .booking-form input:focus + label,
+        .booking-form input:not(:placeholder-shown) + label,
+        .booking-form select:focus + label,
+        .booking-form select:not(:placeholder-shown) + label {
+            top: -10px;
+            font-size: 0.75rem;
+            color: #d4a373;
+        }
+
+        .btn-check-now {
+            background-color: #c89c58;
+            border: none;
+            color: white;
+            font-family: 'Semontic', sans-serif;
+            font-weight: 200;
+        }
+
+        /* --- Mobile-specific styles for Hero Section --- */
+        @media (max-width: 768px) {
+            .hero-section {
+                height: auto; /* Allow height to adjust based on content */
+                min-height: 100vh; /* Ensure it still takes full viewport height if content is short */
+                padding: 0 1rem; /* Remove top padding */
+                text-align: center; /* Center text on mobile */
+                display: flex;
+                flex-direction: column;
+                justify-content: center; /* Center content vertically */
+            }
+
+            .hero-content {
+                margin-top: 5em; /* Remove margin-top in mobile mode */
+                padding: 0 1rem; /* Add horizontal padding to prevent content from touching edges */
+            }
+
+            .hero-title {
+                font-size: 2rem; /* Reduce font size for mobile */
+                margin-bottom: 1rem; /* Reduce margin below title */
+                text-align: center; /* Center align title */
+                letter-spacing: 0.1em; /* Reduce letter spacing */
+            }
+
+            .hero-content p { /* For the "Mabrouk Riad & Spa" text */
+                text-align: center; /* Center align this text too */
+                margin-bottom: 0.5rem; /* Reduce margin below text */
+            }
+
+            .icon-wrapper {
+                display: none; /* Hide the icon in mobile view */
+            }
+
+            .booking-form {
+                margin-top: 1rem; /* Reduce top margin */
+                padding: 1.5rem; /* Increase padding for better touch targets */
+            }
+
+            .booking-form .col-md {
+                margin-bottom: 1rem; /* Add space between form fields */
+            }
+
+            .booking-form .btn-check-now {
+                width: 100%; /* Make button full width */
+            }
+        }
+
+        /* --- Styles pour la section About --- */
+        .about-section {
+            margin-left: 8rem;
+            margin-right: 8rem; /* Increased margin-right slightly */
+            padding-top: 3rem; /* Assure un espace au-dessus de la section */
+            padding-bottom: 5rem; /* Assure un espace en dessous de la section */
+        }
+
+        .about-text {
+            max-width: 40%; /* Conserver la largeur maximale pour les grands écrans */
+        }
+
+        /* Styles pour les images afin qu'elles soient côte à côte sur les grands écrans et s'empilent sur les petits */
+        .about-images {
+            display: flex; /* Utilise flexbox pour aligner les images */
+            gap: 3rem; /* Increase the space between the images */
+            align-items: flex-start; /* Aligne les images en haut */
+        }
+
+        .about-images .item {
+            flex: 1; /* Permet aux éléments de prendre l'espace disponible */
+        }
+
+        .about-images .item-right {
+            position: relative;
+            top: 30px; /* Conserver le décalage vers le bas pour l'image de droite */
+        }
+
+        .about-images .item img {
+            width: 120%; /* Increase the size of the images */
+            height: auto; /* Maintain the aspect ratio */
+            border-radius: 0.5rem; /* Keep the rounded corners */
+        }
+
+        /* --- Responsive styles for About Section --- */
+        @media (max-width: 992px) { /* Pour les tablettes et plus petits */
+            .about-section {
+                margin-left: 2rem; /* Réduire les marges latérales */
+                margin-right: 2rem;
+                padding-top: 3rem;
+                padding-bottom: 3rem;
+            }
+
+            .about-text {
+                max-width: 100%; /* Permet au texte de prendre toute la largeur */
+                margin-bottom: 2rem; /* Ajouter un espace entre le texte et les images */
+                text-align: center; /* Centrer le texte */
+            }
+
+            .about-text h2 {
+                font-size: x-large; /* Réduire la taille du titre */
+            }
+
+            .about-text .d-flex.align-items-start {
+                flex-direction: column; /* Empiler les boutons/liens sur mobile */
+                align-items: center !important; /* Centrer les éléments */
+            }
+
+            .about-text .btn-book {
+                margin-left: 0 !important; /* Réinitialiser la marge gauche */
+                margin-bottom: 1rem; /* Ajouter de l'espace en bas du bouton */
+            }
+
+            .about-images {
+                flex-direction: column; /* Empiler les images verticalement */
+                align-items: center; /* Centrer les images */
+            }
+
+            .about-images .item-right {
+                top: 0; /* Supprimer le décalage vertical pour l'image de droite */
+            }
+        }
+
+        @media (max-width: 768px) { /* Pour les mobiles */
+            .about-section {
+                margin-left: 1rem; /* Marges encore plus petites sur mobile */
+                margin-right: 1rem;
+                padding-top: 2rem;
+                padding-bottom: 2rem;
+            }
+
+            .about-text h2 {
+                font-size: large; /* Réduire davantage la taille du titre */
+            }
+
+            .about-images {
+                width: 100% !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <nav class="navbar navbar-expand-lg bg-light shadow-sm fixed-top">
+        <div class="container-fluid mx-extra">
+            <a class="navbar-brand" href="#">
+                <img src="images/logo.png.png" alt="Mabrouk Logo" class="img-fluid" style="height: 2em;">
+                </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mx-2 lg navbar-collapse justify-content-end">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Rooms</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Restaurant & Sky Bar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Spa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">City Guide</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Founder</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                    <button class="btn btn-book">Book now</button>
+                    </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+
+
+
+    <section class="hero-section ">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content mx-extra">
+            <p class="text-uppercase small mb-2" style="font-family: 'Semontic'; font-weight: 200; color: #d4a373; letter-spacing: 0.3em;">Mabrouk Riad & Spa</p>
+            <h1 class="hero-title" style="font-family: 'Glida Display'; text-transform: uppercase; letter-spacing: 0.2em; font-weight: lighter; margin-bottom: 3rem;">Enjoy a authentic<br>experience</h1>
+            <div class="icon-wrapper" style="margin-bottom: 3rem;">
+                <svg viewBox="0 0 16 16">
+                    <circle class="circle" cx="8" cy="8" r="7" />
+                    <path class="triangle" d="M6 5.5v5l4-2.5-4-2.5z" />
+                </svg>
+            </div>
+
+
+            <form class="row booking-form align-items-center g-2 position-relative">
+                <div class="col-md position-relative">
+                    <input type="date" class="form-control" placeholder=" ">
+                    <label class="form-label">Check in</label>
+                </div>
+                <div class="col-md position-relative">
+                    <input type="date" class="form-control" placeholder=" ">
+                    <label class="form-label">Check out</label>
+                </div>
+                <div class="col-md position-relative">
+                    <select class="form-select" placeholder=" ">
+                        <option>1 Adult</option>
+                        <option>2 Adults</option>
+                        <option>3 Adults</option>
+                    </select>
+                    <label class="form-label">Adults</label>
+                </div>
+                <div class="col-md position-relative">
+                    <select class="form-select" placeholder=" ">
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                    </select>
+                    <label class="form-label">Children</label>
+                </div>
+                <div class="col-md position-relative">
+                    <select class="form-select" placeholder=" ">
+                        <option>1 Room</option>
+                        <option>2 Rooms</option>
+                    </select>
+                    <label class="form-label">Rooms</label>
+                </div>
+                <div class="col-md-auto">
+                    <button type="submit" class="btn btn-check-now w-100">Check Now</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+
+    
+
+    
+    <section class="about-section py-5">
+        <div class="container">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-lg-6 col-md-12 about-text">
+                    <p class="text-uppercase small mb-2" style="font-family: 'Semontic'; font-weight: 200; color: #d4a373; letter-spacing: 0.2em;">About Mabrouk</p>
+                    <h2 class="text-uppercase" style="font-family: 'Glida Display';font-size: xx-large; font-weight: lighter; margin-bottom: 1rem; line-height: 1.2; letter-spacing: 0.1em;">
+                        Laid-back places for<br> kindred spirits
+                    </h2>
+                    <p style="font-family: 'Urbanist'; font-weight: 400; color: #333; margin-bottom: 1rem;">
+                        Welcome to the best five-star resort hotel in New York. The experience elementum sesue the aucan vestibulum alesun usto in sapien rutrum volutan donec fermen.
+                    </p>
+                    <p style="font-family: 'Urbanist'; font-weight: 400; color: #333; margin-bottom: 2rem;">
+                        Lorem ipsum quisque sodales miss in the varius drana miss turpis soffitton tellus in the fermen.
+                    </p>
+                    <div class="d-flex align-items-start flex-md-row flex-column">
+                        <button class="btn btn-book me-3 mb-md-0 mb-3" style="padding: 10px 30px;">Book now</button>
+                        <div class="d-flex align-items-center">
+                            <i class="bi bi-telephone-fill me-2" style="font-size: 1.5rem; color: #333;"></i>
+                            <span style="font-family: 'Urbanist'; font-weight: 400; color: #333;">+212 567 8910</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 col-md-12 about-images mt-md-4 mt-lg-0" style="width: 50%;">
+                    <div class="item item-left">
+                        <img src="images/image1.png" alt="Image 1" class="img-fluid" style="border-radius: 0.5rem;">
+                    </div>
+                    <div class="item item-right">
+                        <img src="images/image2.png" alt="Image 2" class="img-fluid" style="border-radius: 0.5rem;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
