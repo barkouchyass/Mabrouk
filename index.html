@@ -736,6 +736,86 @@
                 font-size: 1rem !important;
             }
         }
+
+
+        .testimonials-section {
+                background: url('images/avis.png') center center/cover no-repeat;
+                min-height: 420px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+            }
+            .testimonials-section::before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background: rgba(0,0,0,0.45);
+                z-index: 1;
+            }
+            .testimonial-content {
+                position: relative;
+                z-index: 2;
+                color: #fff;
+                text-align: center;
+                max-width: 900px;
+                margin: 0 auto;
+                padding: 2rem 1rem;
+            }
+            .testimonial-carousel .testimonial-item {
+                display: none;
+                animation: fadeIn 0.7s;
+            }
+            .testimonial-carousel .testimonial-item.active {
+                display: block;
+            }
+            @keyframes fadeIn {
+                from { opacity: 0; transform: translateY(20px);}
+                to { opacity: 1; transform: translateY(0);}
+            }
+            .testimonial-stars {
+                color: #ffd700;
+                font-size: 2rem;
+                margin-bottom: 1.2rem;
+                letter-spacing: 0.2em;
+            }
+            .testimonial-quote {
+                font-family: 'Glida Display', serif;
+                font-size: 1.7rem;
+                font-weight: 300;
+                margin-bottom: 1.5rem;
+                line-height: 1.4;
+            }
+            .testimonial-author {
+                font-family: 'Urbanist', sans-serif;
+                font-size: 1.1rem;
+                font-weight: 400;
+                color: #fff;
+                opacity: 0.85;
+            }
+            .testimonial-link {
+                color: #d4a373;
+                text-decoration: underline;
+                margin-left: 0.7em;
+                font-size: 1.1rem;
+                font-family: 'Urbanist', sans-serif;
+            }
+            @media (max-width: 768px) {
+                .testimonials-section {
+                    background: url('images/avismovile.png') center center/cover no-repeat;
+                    min-height: 260px;
+                }
+                .testimonial-content {
+                    padding: 1.2rem 0.5rem;
+                    max-width: 320px; /* Réduit la largeur de la zone de texte */
+                }
+                .testimonial-quote {
+                    font-size: 1.1rem;
+                }
+                .testimonial-stars {
+                    font-size: 1.3rem;
+                }
+            }
     </style>
 </head>
 
@@ -1127,8 +1207,12 @@
         </div>
     </section>
 
-     <!-- CITY GUIDE Section -->
-     <section class="city-guide-section" style="background: #f6f4f0; padding: 4rem 0;">
+
+
+
+
+    <!-- CITY GUIDE Section -->
+    <section class="city-guide-section" style="background: #f6f4f0; padding: 4rem 0;">
         <div class="container" style="max-width: 1320px; margin: 0 auto;">
             <div class="text-center mb-5">
                 <div style="color: #b9935a; font-family: 'Urbanist'; letter-spacing: 0.18em; font-size: 1rem; text-transform: uppercase; margin-bottom: 0.5rem;">
@@ -1195,6 +1279,69 @@
     </section>
 
 
+
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section" style="position:relative; width:100%; min-height:420px; margin-bottom:3rem;">
+        <div class="testimonial-content">
+            <div class="testimonial-carousel">
+                <div class="testimonial-item active">
+                    <div class="testimonial-stars">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
+                    <div class="testimonial-quote">
+                        "Hotel was great. Location was excellent. The staff was incredible. A great experience all around."
+                    </div>
+                    <div class="testimonial-author">
+                        Frank E. |
+                        <a class="testimonial-link" href="#" target="_blank">View on Tripadvisor</a>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-stars">&#9733; &#9733; &#9733; &#9733; &#9734;</div>
+                    <div class="testimonial-quote">
+                        "Amazing ambiance and beautiful rooms. The breakfast was delicious and the pool was perfect."
+                    </div>
+                    <div class="testimonial-author">
+                        Sarah L. |
+                        <a class="testimonial-link" href="#" target="_blank">View on Booking.com</a>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-stars">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
+                    <div class="testimonial-quote">
+                        "We loved the spa and the friendly staff. Will definitely come back for another stay!"
+                    </div>
+                    <div class="testimonial-author">
+                        Ahmed B. |
+                        <a class="testimonial-link" href="#" target="_blank">View on Google</a>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-stars">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
+                    <div class="testimonial-quote">
+                        "Perfect location in Marrakech. The city guide was very helpful for our trip."
+                    </div>
+                    <div class="testimonial-author">
+                        Maria P. |
+                        <a class="testimonial-link" href="#" target="_blank">View on Expedia</a>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-stars">&#9733; &#9733; &#9733; &#9733; &#9734;</div>
+                    <div class="testimonial-quote">
+                        "Clean rooms, great amenities, and the restaurant was fantastic. Highly recommended!"
+                    </div>
+                    <div class="testimonial-author">
+                        John D. |
+                        <a class="testimonial-link" href="#" target="_blank">View on Hotels.com</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     
+
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
         crossorigin="anonymous"></script>
@@ -1225,6 +1372,20 @@
         document.getElementById('carousel-prev').onclick = prevText;
         // Changement automatique toutes les 5 secondes
         setInterval(nextText, 5000);
+
+        // Carrousel automatique des avis
+        const testimonialItems = document.querySelectorAll('.testimonial-carousel .testimonial-item');
+        let testimonialIndex = 0;
+        function showTestimonial(idx) {
+            testimonialItems.forEach((item, i) => {
+                item.classList.toggle('active', i === idx);
+            });
+        }
+        function nextTestimonial() {
+            testimonialIndex = (testimonialIndex + 1) % testimonialItems.length;
+            showTestimonial(testimonialIndex);
+        }
+        setInterval(nextTestimonial, 5000);
     </script>
 </body>
 
