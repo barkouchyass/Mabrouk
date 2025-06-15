@@ -702,7 +702,7 @@
                 margin-left: 0 !important;
                 margin-right: 0 !important;
                 margin-top: 2rem !important;
-                margin-bottom: 2rem !important;
+                margin-bottom: 0 !important; /* <-- modifié ici */
             }
             .amenities-section > .container {
                 flex-direction: column !important;
@@ -1010,7 +1010,7 @@
     </section>
 
     <!-- Amenities Section -->
-    <section class="amenities-section" style="background: #f6f4f0; padding: 4rem 8rem 4rem 5rem; margin-top: 5rem; margin-bottom: 5rem;">
+    <section class="amenities-section" style="background: #f6f4f0; padding: 4rem 8rem 4rem 5rem; margin-top: 5rem;">
         <div class="container" style="max-width: 1320px; margin: 0 auto; display: flex; gap: 3rem; align-items: center; padding-top: 3rem; padding-bottom: 3rem;">
             <!-- Left Column -->
             <div style="flex: 1; min-width: 260px;">
@@ -1110,6 +1110,22 @@
         </div>
     </section>
     <!-- End Amenities Section -->
+
+    <!-- Ajout de la nouvelle section vidéo -->
+    <section class="video-section" style="position:relative; width:100%; min-height:400px; margin-bottom:3rem;">
+        <div style="position:relative; width:100%; overflow:hidden;">
+            <!-- Image desktop -->
+            <img src="images/video.png" alt="Skybar Evening" class="d-none d-md-block" style="width:100%; height:auto; display:block; filter:brightness(0.7); object-fit:cover; min-height:400px;">
+            <!-- Image mobile -->
+            <img src="images/videomoble.png" alt="Skybar Evening Mobile" class="d-block d-md-none" style="width:100%; height:auto; display:block; filter:brightness(0.7); object-fit:cover; min-height:220px;">
+            <button style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); background:rgba(255,255,255,0.18); border:none; border-radius:50%; width:80px; height:80px; display:flex; align-items:center; justify-content:center; cursor:pointer;">
+                <svg width="48" height="48" viewBox="0 0 48 48">
+                    <circle cx="24" cy="24" r="23" fill="none" stroke="#fff" stroke-width="2"/>
+                    <polygon points="20,16 34,24 20,32" fill="#fff"/>
+                </svg>
+            </button>
+        </div>
+    </section>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
