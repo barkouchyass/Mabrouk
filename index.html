@@ -695,6 +695,47 @@
                 font-size: 1.1rem !important;
             }
         }
+
+        @media (max-width: 768px) {
+            .amenities-section {
+                padding: 2rem 1rem !important;
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+                margin-top: 2rem !important;
+                margin-bottom: 2rem !important;
+            }
+            .amenities-section > .container {
+                flex-direction: column !important;
+                gap: 2rem !important;
+                padding-top: 1.5rem !important;
+                padding-bottom: 1.5rem !important;
+            }
+            .amenities-section h2 {
+                font-size: 1.3rem !important;
+                margin-bottom: 1rem !important;
+            }
+            .amenities-section > .container > div:first-child {
+                min-width: unset !important;
+                width: 100% !important;
+                text-align: center !important;
+            }
+            .amenities-section > .container > div:last-child {
+                width: 100% !important;
+            }
+            .amenities-grid {
+                grid-template-columns: repeat(2, 1fr) !important;
+                gap: 1.2rem !important;
+            }
+            .amenities-grid > div {
+                min-width: unset !important;
+                padding: 1.5rem 0.7rem 1.2rem 0.7rem !important;
+            }
+            .amenities-section button {
+                width: 100% !important;
+                padding: 0.8rem 0 !important;
+                font-size: 1rem !important;
+            }
+        }
     </style>
 </head>
 
@@ -846,7 +887,7 @@
                         <div style="font-family: 'Urbanist', sans-serif; color: #d4a373; text-transform: uppercase; letter-spacing: 0.18em; font-size: 1rem; margin-bottom: 0.5rem;">
                             Mabrouk Hotel
                         </div>
-                        <div style="font-family: 'Glida Display', serif; color: #fff; font-size: 3.2rem; font-weight: 300; letter-spacing: 0.05em; display: inline-block;">
+                        <div style="font-family: 'Glida Display'; color: #fff; font-size: 2.8rem; font-weight: 100; letter-spacing: 0.05em; display: inline-block;">
                             ROOMS & SUITES
                         </div>
                     </div>
@@ -880,7 +921,7 @@
                         <i class="bi bi-percent"></i> 25% OFF
                     </div>
                     <div style="position:absolute; left:0; right:0; bottom:0; z-index:2; color:#fff; padding:2rem 2rem 1.5rem 2rem;">
-                        <div style="font-family:'Glida Display',serif; font-size:1.5rem; font-weight:400; margin-bottom:1.2rem;">Deluxe Room</div>
+                        <div style="font-family:'Glida Display'; font-size:1.5rem; font-weight:400; margin-bottom:1.2rem;">Deluxe Room</div>
                         <div style="display:flex; gap:1.5rem; font-size:1rem; align-items:center; opacity:0.92;">
                             <span><i class="bi bi-moon" style="color:#d4a373; margin-right:0.4rem;"></i>2 Bed</span>
                             <span><i class="bi bi-aspect-ratio" style="color:#d4a373; margin-right:0.4rem;"></i>15 Sqm</span>
@@ -893,7 +934,7 @@
                     <img src="images/room 2.png" alt="Family Room" style="width:100%; height:340px; object-fit:cover; display:block;">
                     <div style="position:absolute; inset:0; background:linear-gradient(180deg,rgba(0,0,0,0.18) 40%,rgba(0,0,0,0.75) 100%); z-index:1;"></div>
                     <div style="position:absolute; left:0; right:0; bottom:0; z-index:2; color:#fff; padding:2rem 2rem 1.5rem 2rem;">
-                        <div style="font-family:'Glida Display',serif; font-size:1.5rem; font-weight:400; margin-bottom:1.2rem;">Family Room</div>
+                        <div style="font-family:'Glida Display'; font-size:1.5rem; font-weight:400; margin-bottom:1.2rem;">Family Room</div>
                         <div style="display:flex; gap:1.5rem; font-size:1rem; align-items:center; opacity:0.92;">
                             <span><i class="bi bi-moon" style="color:#d4a373; margin-right:0.4rem;"></i>2-4 Bed</span>
                             <span><i class="bi bi-aspect-ratio" style="color:#d4a373; margin-right:0.4rem;"></i>20 Sqm</span>
@@ -906,7 +947,169 @@
         </div>
     </section>
 
-    
+
+
+
+
+    <!-- Exclusive Offers Section -->
+    <section class="exclusive-offers-section mx-extra" style="padding: 4rem 0 2rem 0; background: #fff;">
+        <div class="container" style="max-width: 1320px; margin: 0 auto;">
+            <div class="text-center mb-5">
+                <div style="color: #d4a373; font-family: 'Urbanist', sans-serif; letter-spacing: 0.18em; font-size: 1rem; text-transform: uppercase; margin-bottom: 0.5rem;">
+                    Comfort & Relax
+                </div>
+                <h2 style="font-family: 'Glida Display'; font-size: 2rem; font-weight: 100; letter-spacing: 0.05em; margin-bottom: 2.5rem;">
+                    EXCLUSIVE OFFERS
+                </h2>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <!-- Offer 1 -->
+                <div class="col-12 col-sm-6 col-lg-3 d-flex">
+                    <div style="position:relative; border-radius:1rem; overflow:hidden; width:100%; background:#fff; box-shadow:0 8px 32px rgba(0,0,0,0.08);">
+                        <img src="images/01.jpg.png" alt="Stay" style="width:100%; height:100%; object-fit:cover; display:block;">
+                        <div style="position:absolute; top:1.2rem; left:1.2rem; z-index:2; background:#fff; color:#333; font-size:1rem; font-family:'Urbanist',sans-serif; font-weight:500; border-radius:0.6rem; padding:0.3rem 1rem; box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+                            30% OFF
+                        </div>
+                        <div style="position:absolute; left:0; right:0; bottom:0; z-index:2; color:#fff; padding:2rem 2rem 1.5rem 2rem; background:linear-gradient(180deg,rgba(0,0,0,0.10) 40%,rgba(0,0,0,0.60) 100%);">
+                            <div style="font-family:'Glida Display'; font-size:1.5rem; font-weight:400;">Stay</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Offer 2 -->
+                <div class="col-12 col-sm-6 col-lg-3 d-flex">
+                    <div style="position:relative; border-radius:1rem; overflow:hidden; width:100%; background:#fff; box-shadow:0 8px 32px rgba(0,0,0,0.08);">
+                        <img src="images/02.jpg.png" alt="Dine" style="width:100%; height:100%; object-fit:cover; display:block;">
+                        <div style="position:absolute; left:0; right:0; bottom:0; z-index:2; color:#fff; padding:2rem 2rem 1.5rem 2rem; background:linear-gradient(180deg,rgba(0,0,0,0.10) 40%,rgba(0,0,0,0.60) 100%);">
+                            <div style="font-family:'Glida Display'; font-size:1.5rem; font-weight:400;">Dine</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Offer 3 -->
+                <div class="col-12 col-sm-6 col-lg-3 d-flex">
+                    <div style="position:relative; border-radius:1rem; overflow:hidden; width:100%; background:#fff; box-shadow:0 8px 32px rgba(0,0,0,0.08);">
+                        <img src="images/03.jpg.png" alt="Relax" style="width:100%; height:100%; object-fit:cover; display:block;">
+                        <div style="position:absolute; top:1.2rem; left:1.2rem; z-index:2; background:#fff; color:#333; font-size:1rem; font-family:'Urbanist',sans-serif; font-weight:500; border-radius:0.6rem; padding:0.3rem 1rem; box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+                            20% OFF
+                        </div>
+                        <div style="position:absolute; left:0; right:0; bottom:0; z-index:2; color:#fff; padding:2rem 2rem 1.5rem 2rem; background:linear-gradient(180deg,rgba(0,0,0,0.10) 40%,rgba(0,0,0,0.60) 100%);">
+                            <div style="font-family:'Glida Display'; font-size:1.5rem; font-weight:400;">Relax</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Offer 4 -->
+                <div class="col-12 col-sm-6 col-lg-3 d-flex">
+                    <div style="position:relative; border-radius:1rem; overflow:hidden; width:100%; background:#fff; box-shadow:0 8px 32px rgba(0,0,0,0.08);">
+                        <img src="images/04.jpg.png" alt="Weddings" style="width:100%; height:100%; object-fit:cover; display:block;">
+                        <div style="position:absolute; left:0; right:0; bottom:0; z-index:2; color:#fff; padding:2rem 2rem 1.5rem 2rem; background:linear-gradient(180deg,rgba(0,0,0,0.10) 40%,rgba(0,0,0,0.60) 100%);">
+                            <div style="font-family:'Glida Display'; font-size:1.5rem; font-weight:400;">Weddings</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Amenities Section -->
+    <section class="amenities-section" style="background: #f6f4f0; padding: 4rem 8rem 4rem 5rem; margin-top: 5rem; margin-bottom: 5rem;">
+        <div class="container" style="max-width: 1320px; margin: 0 auto; display: flex; gap: 3rem; align-items: center; padding-top: 3rem; padding-bottom: 3rem;">
+            <!-- Left Column -->
+            <div style="flex: 1; min-width: 260px;">
+                <div style="color: #b9935a; font-family: 'Urbanist', sans-serif; letter-spacing: 0.18em; font-size: 1rem; text-transform: uppercase; margin-bottom: 0.7rem;">
+                    Hotel Services
+                </div>
+                <h2 style="font-family: 'Glida Display'; font-size: 2.5rem; font-weight: 100; letter-spacing: 0.05em; margin-bottom: 1.5rem; text-transform: uppercase;">
+                    Amenities
+                </h2>
+                <p style="font-family: 'Urbanist', sans-serif; color: #888; font-size: 1.1rem; margin-bottom: 2.5rem; max-width: 350px;">
+                    The experience elementum sesue the antion alesun in sapien fermen in the sapien.
+                </p>
+                <button style="background: #b9935a; color: #fff; border: none; border-radius: 7px; font-family: 'Urbanist', sans-serif; font-size: 1.1rem; padding: 0.9rem 2.5rem; font-weight: 500; transition: background 0.2s;">
+                    All Amenities
+                </button>
+            </div>
+            <!-- Right Column: Amenities Grid -->
+            <div style="flex: 2.2;">
+                <div class="amenities-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.8rem;">
+                    <!-- Amenity 1 -->
+                    <div style="background: #fff; border-radius: 13px; box-shadow: 0 2px 12px rgba(0,0,0,0.03); padding: 2.5rem 1.2rem 2rem 1.2rem; text-align: center; min-width: 160px;">
+                        <div style="margin-bottom: 1.2rem;">
+                            <!-- Pick Up & Drop Icon -->
+                            <svg width="48" height="48" fill="none" stroke="#b9935a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M10 36v-4a2 2 0 0 1 2-2h24a2 2 0 0 1 2 2v4"/>
+                                <rect x="14" y="20" width="20" height="10" rx="2"/>
+                                <path d="M24 20v-6a4 4 0 0 1 4-4h6"/>
+                                <circle cx="18" cy="36" r="2"/>
+                                <circle cx="30" cy="36" r="2"/>
+                                <path d="M38 30v-2a2 2 0 0 0-2-2h-2"/>
+                            </svg>
+                        </div>
+                        <div style="font-family: 'Glida Display', serif; font-size: 1.25rem; color: #222;">Pick Up & Drop</div>
+                    </div>
+                    <!-- Amenity 2 -->
+                    <div style="background: #fff; border-radius: 13px; box-shadow: 0 2px 12px rgba(0,0,0,0.03); padding: 2.5rem 1.2rem 2rem 1.2rem; text-align: center;">
+                        <div style="margin-bottom: 1.2rem;">
+                            <!-- Parking Space Icon -->
+                            <svg width="48" height="48" fill="none" stroke="#b9935a" stroke-width="2">
+                                <circle cx="24" cy="24" r="16"/>
+                                <text x="24" y="30" text-anchor="middle" font-size="18" fill="#b9935a" font-family="Arial" font-weight="bold">P</text>
+                            </svg>
+                        </div>
+                        <div style="font-family: 'Glida Display', serif; font-size: 1.25rem; color: #222;">Parking Space</div>
+                    </div>
+                    <!-- Amenity 3 -->
+                    <div style="background: #fff; border-radius: 13px; box-shadow: 0 2px 12px rgba(0,0,0,0.03); padding: 2.5rem 1.2rem 2rem 1.2rem; text-align: center;">
+                        <div style="margin-bottom: 1.2rem;">
+                            <!-- Room Service Icon -->
+                            <svg width="48" height="48" fill="none" stroke="#b9935a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="14" y="28" width="20" height="8" rx="2"/>
+                                <path d="M24 28v-8m0 0c0-4 8-4 8 0v8"/>
+                                <circle cx="34" cy="32" r="2"/>
+                                <path d="M18 36v-2"/>
+                            </svg>
+                        </div>
+                        <div style="font-family: 'Glida Display', serif; font-size: 1.25rem; color: #222;">Room Service</div>
+                    </div>
+                    <!-- Amenity 4 -->
+                    <div style="background: #fff; border-radius: 13px; box-shadow: 0 2px 12px rgba(0,0,0,0.03); padding: 2.5rem 1.2rem 2rem 1.2rem; text-align: center;">
+                        <div style="margin-bottom: 1.2rem;">
+                            <!-- Swimming Pool Icon -->
+                            <svg width="48" height="48" fill="none" stroke="#b9935a" stroke-width="2">
+                                <rect x="10" y="28" width="28" height="8" rx="4"/>
+                                <path d="M16 28v-8a4 4 0 0 1 8 0v8"/>
+                                <path d="M14 36c2 2 6 2 8 0s6-2 8 0"/>
+                            </svg>
+                        </div>
+                        <div style="font-family: 'Glida Display', serif; font-size: 1.25rem; color: #222;">Swimming Pool</div>
+                    </div>
+                    <!-- Amenity 5 -->
+                    <div style="background: #fff; border-radius: 13px; box-shadow: 0 2px 12px rgba(0,0,0,0.03); padding: 2.5rem 1.2rem 2rem 1.2rem; text-align: center;">
+                        <div style="margin-bottom: 1.2rem;">
+                            <!-- Fibre Internet Icon -->
+                            <svg width="48" height="48" fill="none" stroke="#b9935a" stroke-width="2">
+                                <path d="M12 32c3-6 21-6 24 0"/>
+                                <circle cx="24" cy="32" r="2"/>
+                                <path d="M16 28c2-4 14-4 16 0"/>
+                            </svg>
+                        </div>
+                        <div style="font-family: 'Glida Display', serif; font-size: 1.25rem; color: #222;">Fibre Internet</div>
+                    </div>
+                    <!-- Amenity 6 -->
+                    <div style="background: #fff; border-radius: 13px; box-shadow: 0 2px 12px rgba(0,0,0,0.03); padding: 2.5rem 1.2rem 2rem 1.2rem; text-align: center;">
+                        <div style="margin-bottom: 1.2rem;">
+                            <!-- Breakfast Icon -->
+                            <svg width="48" height="48" fill="none" stroke="#b9935a" stroke-width="2" stroke-linecap="round">
+                                <rect x="14" y="20" width="20" height="12" rx="4"/>
+                                <circle cx="34" cy="26" r="2"/>
+                                <path d="M18 36h12"/>
+                            </svg>
+                        </div>
+                        <div style="font-family: 'Glida Display', serif; font-size: 1.25rem; color: #222;">Breakfast</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Amenities Section -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
