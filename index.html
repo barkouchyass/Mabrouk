@@ -12,7 +12,6 @@
     <style>
         .mx-extra {
             margin-left: 5rem;
-          
             margin-right: 8rem;
         }
 
@@ -118,7 +117,6 @@
                 transform: translateY(-5%);
             }
         }
-
 
         @media (max-width: 768px) {
             .mx-extra {
@@ -737,7 +735,6 @@
             }
         }
 
-
         .testimonials-section {
                 background: url('images/avis.png') center center/cover no-repeat;
                 min-height: 420px;
@@ -816,6 +813,115 @@
                     font-size: 1.3rem;
                 }
             }
+
+        .footer-contact-narrow {
+            max-width: 260px;
+            width: 100%;
+        }
+        @media (max-width: 768px) {
+            .footer-contact-narrow {
+                max-width: 100%;
+            }
+        }
+
+        .footer-main-padding {
+            padding-left: 5rem;
+            padding-right: 8rem;
+        }
+
+        @media (max-width: 992px) {
+            .footer-main-padding {
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .footer-main-padding {
+                padding-left: 1rem;
+                padding-right: 1rem;
+                text-align: center;
+            }
+            .footer-main-padding .container {
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: center !important;
+                justify-content: center !important;
+            }
+            .footer-main-padding .row {
+                flex-direction: column !important;
+                align-items: center !important;
+                text-align: center !important;
+                gap: 2rem !important;
+            }
+            .footer-main-padding .col-md-4,
+            .footer-main-padding .footer-contact-narrow {
+                max-width: 100% !important;
+                width: 100% !important;
+                margin-bottom: 1.5rem !important;
+            }
+            .footer-main-padding form {
+                justify-content: center !important;
+            }
+            .footer-main-padding .container > div,
+            .footer-main-padding .container > .row {
+                width: 100% !important;
+            }
+            .footer-main-padding .container > .row > div {
+                width: 100% !important;
+            }
+            .footer-main-padding .container > .row > div > * {
+                margin-left: auto !important;
+                margin-right: auto !important;
+            }
+            .footer-main-padding .container > .row > div > div,
+            .footer-main-padding .container > .row > div > h5,
+            .footer-main-padding .container > .row > div > form {
+                text-align: center !important;
+            }
+            .footer-main-padding .container > .row > div > form {
+                flex-direction: column !important;
+                gap: 0.7rem !important;
+            }
+            .footer-main-padding .container > .row > div > form input,
+            .footer-main-padding .container > .row > div > form button {
+                width: 100% !important;
+                border-radius: 2rem !important;
+            }
+            .footer-main-padding .container > .row > div > form button {
+                border-radius: 2rem !important;
+                margin-top: 0.5rem;
+            }
+            .footer-main-padding .container > div[style*="display: flex; justify-content: space-between"] {
+                flex-direction: column !important;
+                align-items: center !important;
+                gap: 1.2rem !important;
+                text-align: center !important;
+            }
+            .footer-main-padding .container > div[style*="display: flex; justify-content: space-between"] > div {
+                justify-content: center !important;
+                align-items: center !important;
+                width: 100% !important;
+                text-align: center !important;
+            }
+            .footer-main-padding .col-md-4 > div[style*="display: flex; align-items: center"] {
+                justify-content: center !important;
+                display: flex !important;
+            }
+            .footer-main-padding .col-md-4 > div[style*="display: flex; align-items: center"] img {
+                margin-left: auto !important;
+                margin-right: auto !important;
+                display: block !important;
+            }
+            /* Réduit l'espace entre les liens du footer en mobile */
+            .footer-main-padding .container > div[style*="display: flex; gap: 2rem; flex-wrap: wrap;"] {
+                gap: 0.7rem !important;
+                margin-bottom: 1.2rem !important; /* Ajoute un espace sous les liens */
+            }
+            .footer-main-padding .container > div[style*="display: flex; gap: 2rem; flex-wrap: wrap;"] a {
+                margin-right: 0.5rem !important;
+            }
+        }
     </style>
 </head>
 
@@ -1192,7 +1298,7 @@
     <!-- End Amenities Section -->
 
     <!-- Ajout de la nouvelle section vidéo -->
-    <section class="video-section" style="position:relative; width:100%; min-height:400px; margin-bottom:3rem;">
+    <section class="video-section" style="position:relative; width:100%; min-height:400px;">
         <div style="position:relative; width:100%; overflow:hidden;">
             <!-- Image desktop -->
             <img src="images/video.png" alt="Skybar Evening" class="d-none d-md-block" style="width:100%; height:auto; display:block; filter:brightness(0.7); object-fit:cover; min-height:400px;">
@@ -1282,7 +1388,7 @@
 
 
     <!-- Testimonials Section -->
-    <section class="testimonials-section" style="position:relative; width:100%; min-height:420px; margin-bottom:3rem;">
+    <section class="testimonials-section" style="position:relative; width:100%; min-height:420px; margin-bottom:0;">
         <div class="testimonial-content">
             <div class="testimonial-carousel">
                 <div class="testimonial-item active">
@@ -1341,6 +1447,72 @@
 
      
 
+    <!-- Footer Section -->
+    <footer class="footer-main-padding" style="background: #181818; color: #fff; padding: 3rem 0 0 0; font-family: 'Urbanist', sans-serif;">
+        <div class="container" style="max-width: 1320px; margin: 0 auto;">
+            <div class="row justify-content-between align-items-start" style="margin-bottom: 2.5rem; gap: 1.2rem;">
+                <!-- Logo & Description -->
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                        <img src="images/logo.png.png" alt="Mabrouk Logo" style="height: auto; width: auto;">
+                       
+                    </div>
+                    <p style="margin-top: 1.5rem; color: #bdbdbd; font-size: 1.05rem;">
+                        Lorem ipsum is simply dummy text of the printe and type setting industry in the fermen.
+                    </p>
+                    <div style="margin-top: 1.5rem;">
+                        <a href="#" style="display:inline-block; margin-right: 0.7rem; color: #fff; border: 1px solid #333; border-radius: 50%; width: 44px; height: 44px; text-align: center; line-height: 44px; font-size: 1.3rem; transition: background 0.2s;"><i class="bi bi-instagram"></i></a>
+                        <a href="#" style="display:inline-block; margin-right: 0.7rem; color: #fff; border: 1px solid #333; border-radius: 50%; width: 44px; height: 44px; text-align: center; line-height: 44px; font-size: 1.3rem; transition: background 0.2s;"><i class="bi bi-twitter"></i></a>
+                        <a href="#" style="display:inline-block; color: #fff; border: 1px solid #333; border-radius: 50%; width: 44px; height: 44px; text-align: center; line-height: 44px; font-size: 1.3rem; transition: background 0.2s;"><i class="bi bi-facebook"></i></a>
+                    </div>
+                </div>
+                <!-- Contact Info -->
+                <div class="col-md-4 mb-4 mb-md-0 footer-contact-narrow">
+                    <h5 style="font-family: 'Glida Display'; font-size: 1.4rem; margin-bottom: 1.2rem;">Contact us</h5>
+                    <div style="color: #bdbdbd; font-size: 1.05rem;">
+                        Jamaa lafina<br>
+                        Marrakech<br>
+                        +212 123 567 8910<br>
+                        <a href="mailto:hi@riadmabrouk.com" style="color: #bdbdbd; text-decoration: underline;">hi@riadmabrouk.com</a>
+                    </div>
+                </div>
+                <!-- Subscribe -->
+                <div class="col-md-4">
+                    <h5 style="font-family: 'Glida Display'; font-size: 1.4rem; margin-bottom: 1.2rem;">Subscribe</h5>
+                    <div style="color: #bdbdbd; font-size: 1.05rem; margin-bottom: 1.2rem;">
+                        Want to be notified about our services. Just sign up and we'll send you a notification by email.
+                    </div>
+                    <form style="display: flex; align-items: center; gap: 0.5rem;">
+                        <input type="email" placeholder="Email Address" style="flex:1; padding: 0.7rem 1rem; border-radius: 2rem 0 0 2rem; border: none; outline: none; background: #232323; color: #fff;">
+                        <button type="submit" style="background: #d4a373; border: none; border-radius: 0 2rem 2rem 0; width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 1.3rem;">
+                            <i class="bi bi-arrow-right"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div style="background: #141414; padding: 1.2rem 0 1.2rem 0; margin-top: 2rem;">
+            <div class="container" style="max-width: 1320px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+                <div style="display: flex; gap: 2rem; flex-wrap: wrap;">
+                    <a href="#" style="color: #fff; text-decoration: none; font-size: 1.05rem; margin-right: 1.2rem;">Home</a>
+                    <a href="#" style="color: #fff; text-decoration: none; font-size: 1.05rem; margin-right: 1.2rem;">About</a>
+                    <a href="#" style="color: #fff; text-decoration: none; font-size: 1.05rem; margin-right: 1.2rem;">Services</a>
+                    <a href="#" style="color: #fff; text-decoration: none; font-size: 1.05rem; margin-right: 1.2rem;">Portfolio</a>
+                    <a href="#" style="color: #fff; text-decoration: none; font-size: 1.05rem; margin-right: 1.2rem;">Blog</a>
+                    <a href="#" style="color: #fff; text-decoration: none; font-size: 1.05rem; margin-right: 1.2rem;">Contact</a>
+                </div>
+                <div style="color: #bdbdbd; font-size: 0.8em;">
+                    Copyright 2024
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer Section -->
+
+    <!-- Bouton scroll-to-top -->
+    <a id="scrollToTopBtn" href="#" style="display:none; position:fixed; bottom:32px; right:32px; z-index:9999; background:#d4a373; color:#fff; border-radius:50%; width:56px; height:56px; box-shadow:0 4px 16px rgba(0,0,0,0.15); align-items:center; justify-content:center; font-size:2rem; text-align:center; transition:opacity 0.2s;">
+        <i class="bi bi-arrow-up"></i>
+    </a>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
@@ -1386,6 +1558,20 @@
             showTestimonial(testimonialIndex);
         }
         setInterval(nextTestimonial, 5000);
+
+        // Scroll-to-top button logic
+        const scrollBtn = document.getElementById('scrollToTopBtn');
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 120) {
+                scrollBtn.style.display = 'flex';
+            } else {
+                scrollBtn.style.display = 'none';
+            }
+        });
+        scrollBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
     </script>
 </body>
 
